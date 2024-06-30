@@ -1,0 +1,34 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@valkyr/event-emitter@1.0.0": "jsr:@valkyr/event-emitter@1.0.0",
+      "jsr:@valkyr/json-rpc@1.0.1": "jsr:@valkyr/json-rpc@1.0.1",
+      "npm:eventemitter3@5.0.1": "npm:eventemitter3@5.0.1"
+    },
+    "jsr": {
+      "@valkyr/event-emitter@1.0.0": {
+        "integrity": "d211565dbfe10227a46edfd7a8c222c34e904f04c5acbd0d6f3ef150502413e3",
+        "dependencies": [
+          "npm:eventemitter3@5.0.1"
+        ]
+      },
+      "@valkyr/json-rpc@1.0.1": {
+        "integrity": "aa325e19e356bd952b295c0766c3c0c5d294e8c678c3c4c193da5222235714ba"
+      }
+    },
+    "npm": {
+      "eventemitter3@5.0.1": {
+        "integrity": "sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==",
+        "dependencies": {}
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@valkyr/event-emitter@1.0.0",
+      "jsr:@valkyr/json-rpc@1.0.1"
+    ]
+  }
+}

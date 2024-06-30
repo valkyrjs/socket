@@ -1,0 +1,27 @@
+{
+  "name": "@valkyr/socket",
+  "version": "1.0.0",
+  "exports": "./socket.ts",
+  "imports": {
+    "@valkyr/event-emitter": "jsr:@valkyr/event-emitter@1.0.0",
+    "@valkyr/json-rpc": "jsr:@valkyr/json-rpc@1.0.1"
+  },
+  "exclude": [
+    ".vscode"
+  ],
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any",
+        "require-await"
+      ]
+    }
+  },
+  "fmt": {
+    "lineWidth": 120
+  },
+  "tasks": {
+    "test": "deno test --allow-all --unstable-ffi",
+    "lint": "deno lint --fix"
+  }
+}
