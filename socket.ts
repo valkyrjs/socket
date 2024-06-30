@@ -38,14 +38,14 @@ export class Socket extends EventEmitter<"connected" | "disconnected" | string> 
   /**
    * Check if the ready state of the socket is open.
    */
-  get isConnected() {
+  get isConnected(): boolean {
     return this.#ws?.readyState === WebSocket.OPEN;
   }
 
   /**
    * Get the socket instance. This throws an error if the socket is not connected.
    */
-  get socket() {
+  get socket(): WebSocket {
     const ws = this.#ws;
     if (ws === undefined || this.isConnected === false) {
       throw new Error("Socket is not connected");
@@ -104,7 +104,7 @@ export class Socket extends EventEmitter<"connected" | "disconnected" | string> 
   /**
    * Disconnect the socket with a 4000 CLOSED_BY_CLIENT code.
    */
-  disconnect() {
+  disconnect(): Socket {
     if (this.#ws) {
       this.#ws.close(4000, "CLOSED_BY_CLIENT");
     }
